@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dws7hw0pmtosd"]
+
+[ext_resource type="Script" uid="uid://f8jus80qr1qd" path="res://upper_body.gd" id="1_y2pml"]
+
+[node name="Character2d" type="Node2D" unique_id=1386289386]
+
+[node name="UpperBody" type="Node2D" parent="." unique_id=1651390627]
+script = ExtResource("1_y2pml")

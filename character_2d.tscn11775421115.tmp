@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dws7hw0pmtosd"]
+
+[ext_resource type="Script" uid="uid://c37rgxmec4f3h" path="res://character_2d.gd" id="1_boqsx"]
+[ext_resource type="Script" uid="uid://f8jus80qr1qd" path="res://upper_body.gd" id="1_y2pml"]
+[ext_resource type="Script" uid="uid://7nawq0746ici" path="res://right_arm.gd" id="2_k8one"]
+
+[node name="Character2d" type="Node2D" unique_id=1386289386]
+script = ExtResource("1_boqsx")
+
+[node name="UpperBody" type="Node2D" parent="." unique_id=1651390627]
+script = ExtResource("1_y2pml")
+
+[node name="RightArm" type="Node2D" parent="." unique_id=186424878]
+script = ExtResource("2_k8one")
