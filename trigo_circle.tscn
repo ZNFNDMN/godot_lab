@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dy5lvx30ef1q6"]
+
+[ext_resource type="Script" uid="uid://bisoynup38s78" path="res://trigo_circle.gd" id="1_fhdd6"]
+
+[node name="trigoCircle" type="Node2D" unique_id=708977539]
+script = ExtResource("1_fhdd6")

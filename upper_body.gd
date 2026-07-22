@@ -8,9 +8,8 @@ var torso_points = PackedVector2Array([])
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position = get_viewport().size / 2
-	position -= Vector2(0, 300) # décale le personnage par rapport au centre
-
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -38,14 +37,12 @@ func _draw() -> void:
 	var angle_rad = deg_to_rad(270) 
 	var torso_center = Vector2(0, 300)
 	var direction = Vector2(cos(angle_rad), sin(angle_rad)) 
-	var pos = torso_center + direction * 200
-	print(position.distance_to(Vector2(0,300)))
 	
-	draw_circle(pos, 5, Color('red'), true)
+	draw_circle(torso_center, 5, Color('white'), true)
 	#draw_circle()
 	#draw_polygon(head_points, [])
-	draw_polyline(head_points, Color('white'), 1, false) # tête
-	draw_polyline(torso_points, Color('white'), 1, false)# torse
+	draw_polyline(head_points, Color('white'), 3, false) # tête
+	draw_polyline(torso_points, Color('white'), 3, false)# torse
 	
 	# draw torso 
 	
