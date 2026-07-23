@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://f8jus80qr1qd" path="res://upper_body.gd" id="1_y2pml"]
 [ext_resource type="Script" uid="uid://7nawq0746ici" path="res://right_arm.gd" id="2_k8one"]
 [ext_resource type="Script" uid="uid://c6wuev801hh4g" path="res://left_arm.gd" id="4_blrwb"]
-[ext_resource type="Script" uid="uid://bgt756saub4dl" path="res://forearm.gd" id="4_e2obb"]
 [ext_resource type="Script" uid="uid://cbgc1d1c1xo6u" path="res://blade.gd" id="4_nok0s"]
-[ext_resource type="Script" uid="uid://7c1tvik0v1lv" path="res://left_thigh.gd" id="7_vjw14"]
 
 [node name="2dCharacter" type="Node2D" unique_id=1386289386]
 script = ExtResource("1_boqsx")
@@ -17,20 +15,8 @@ script = ExtResource("1_y2pml")
 [node name="RightArm" type="Node2D" parent="." unique_id=186424878]
 script = ExtResource("2_k8one")
 
-[node name="Forearm" type="Node2D" parent="RightArm" unique_id=771532086]
-script = ExtResource("4_e2obb")
-
 [node name="LeftArm" type="Node2D" parent="." unique_id=1789335632]
 script = ExtResource("4_blrwb")
 
 [node name="Blade" type="Node2D" parent="LeftArm" unique_id=1782421012]
 script = ExtResource("4_nok0s")
-
-[node name="LeftThigh" type="Node2D" parent="." unique_id=1957288806]
-script = ExtResource("7_vjw14")
-
-[node name="LeftTibia" type="Node2D" parent="LeftThigh" unique_id=1783430909]
-
-[node name="RightThigh" type="Node2D" parent="." unique_id=43983075]
-
-[node name="RightTibia" type="Node2D" parent="RightThigh" unique_id=1355359527]

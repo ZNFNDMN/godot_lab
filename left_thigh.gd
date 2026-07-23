@@ -1,11 +1,11 @@
 extends Node2D
 
 func _draw() -> void:
-	var left_arm_pos = Vector2(160, 250) # position du bras droit
-	draw_circle(left_arm_pos, 5, Color('green'), true)
-	var angles := [135, -78, 90, 135] # quel angle pour le bras gauche
+	var left_arm_pos = Vector2(70, 430) # position du bras droit
+	draw_circle(left_arm_pos, 5, Color('red'), true)
+	var angles := [135, -90, 45, 90, 135] # quel angle pour le bras gauche
 	var angles_list_size = angles.size()
-	var angles_distance := [100, 150, 200, 100] 
+	var angles_distance := [80, 100, 50, 200, 80] 
 	var angles_pos := []
 	var angles_color := ['red', 'green', 'blue', 'yellow']
 	

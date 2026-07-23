@@ -27,7 +27,7 @@ func _draw() -> void:
 	for angle in torso_angles:
 		var angle_rad = deg_to_rad(angle)
 		var direction = Vector2(cos(angle_rad), sin(angle_rad))
-		var pos = direction * 200
+		var pos = direction * 180
 		pos += Vector2(0,300) # décale le torse en dessous de la tête
 		torso_points.append(pos)
 		#dessine les lignes interieures du torse
@@ -38,11 +38,11 @@ func _draw() -> void:
 	var torso_center = Vector2(0, 300)
 	var direction = Vector2(cos(angle_rad), sin(angle_rad)) 
 	
-	draw_circle(torso_center, 5, Color('white'), true)
+	#draw_circle(torso_center, 5, Color('white'), true)
 	#draw_circle()
 	#draw_polygon(head_points, [])
-	draw_polyline(head_points, Color('white'), 3, false) # tête
-	draw_polyline(torso_points, Color('white'), 3, false)# torse
+	draw_polyline(head_points, Color('white'), 2, false) # tête
+	draw_polyline(torso_points, Color('white'), 2, false)# torse
 	
 	# draw torso 
 	
