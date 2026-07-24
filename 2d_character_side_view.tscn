@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://hwxa3n2pg1tw"]
+
+[ext_resource type="Script" uid="uid://cugo07hmb02pn" path="res://2d_character_side_view.gd" id="1_8xpwk"]
+
+[node name="2dCharacterSideView" type="Node2D" unique_id=205648374]
+scale = Vector2(5, 5)
+script = ExtResource("1_8xpwk")
+
+[node name="Head" type="Node2D" parent="." unique_id=1417577573]
+
+[node name="Torso" type="Node2D" parent="." unique_id=1740320730]
+
+[node name="LeftThigh" type="Node2D" parent="." unique_id=1207477873]
