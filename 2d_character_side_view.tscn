@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cugo07hmb02pn" path="res://2d_character_side_view.gd" id="1_8xpwk"]
 
 [node name="2dCharacterSideView" type="Node2D" unique_id=205648374]
-scale = Vector2(5, 5)
 script = ExtResource("1_8xpwk")
 
 [node name="Head" type="Node2D" parent="." unique_id=1417577573]
@@ -11,3 +10,9 @@ script = ExtResource("1_8xpwk")
 [node name="Torso" type="Node2D" parent="." unique_id=1740320730]
 
 [node name="LeftThigh" type="Node2D" parent="." unique_id=1207477873]
+
+[node name="LeftTibia" type="Node2D" parent="LeftThigh" unique_id=170491201]
+
+[node name="RightThigh" type="Node2D" parent="." unique_id=861915960]
+
+[node name="RightTibia" type="Node2D" parent="RightThigh" unique_id=1369174110]
