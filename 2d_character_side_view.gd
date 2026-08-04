@@ -15,13 +15,28 @@ var b_angle := 180-a_angle # angle symétrique à a_angle
 var b_angle_rad := deg_to_rad(b_angle)
 var b = Vector2(b_distance * cos(b_angle_rad), b_distance * sin(b_angle_rad))
 
-var b2_distance := b_distance * 2 
+var b2_distance := b_distance * 2
 var b2_angle := b_angle # angle symétrique à a_angle
 var b2_angle_rad := b_angle_rad
 var b2 = Vector2(b2_distance * cos(b2_angle_rad), b2_distance * sin(b2_angle_rad))
 
+@export var angle_min := -30.0
+@export var angle_max := 30.0
+@export var frequence := 1.0  # oscillations par seconde
+
+var _t := 0.0
+
 func _ready() -> void:
 	position = get_viewport().size / 2
+	
+func _process(delta: float) -> void:
+	_t += delta
+	var k := (sin(TAU * frequence * _t) + 1.0) * 0.5  # 0 → 1
+	rotation_degrees = lerp(angle_min, angle_max, k)
+	print(rotation_degrees)
+	b2_angle_rad += delta
+	b2 = Vector2(b.x + b2_distance * cos(b2_angle_rad), b.y + b2_distance * sin(b2_angle_rad))
+	queue_redraw()
 	
 func _draw() -> void:
 	draw_circle(Vector2.ZERO, 10, Color('red'), true)
