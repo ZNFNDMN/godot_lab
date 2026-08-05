@@ -20,9 +20,12 @@ var b2_angle := b_angle # angle symétrique à a_angle
 var b2_angle_rad := b_angle_rad
 var b2 = Vector2(b2_distance * cos(b2_angle_rad), b2_distance * sin(b2_angle_rad))
 
-@export var angle_min := -30.0
-@export var angle_max := 30.0
-@export var frequence := 1.0  # oscillations par seconde
+@export var angle_min := deg_to_rad(-90.0)
+@export var angle_max := deg_to_rad(90.0)
+@export var angle2_min := deg_to_rad(90.0)
+@export var angle2_max := deg_to_rad(-90.0)
+
+@export var frequence := 0.3   # oscillations par seconde
 
 var _t := 0.0
 
@@ -32,10 +35,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	_t += delta
 	var k := (sin(TAU * frequence * _t) + 1.0) * 0.5  # 0 → 1
-	rotation_degrees = lerp(angle_min, angle_max, k)
-	print(rotation_degrees)
-	b2_angle_rad += delta
-	b2 = Vector2(b.x + b2_distance * cos(b2_angle_rad), b.y + b2_distance * sin(b2_angle_rad))
+	var j := (sin(TAU * frequence * _t) + 1.0) * 0.5  # 0 → 1
+	#rotation_degrees = lerp(angle_min, angle_max, k
+	var angle = lerp(angle_min, angle_max, k)
+	var angle2 = lerp(angle2_min, angle2_max, j)
+	#print(rotation_degrees)
+	#b2_angle_rad += delta
+	b2 = Vector2(b.x + b2_distance * cos(angle), b.y + b2_distance * sin(angle))
+	a2 = Vector2(a.x + a2_distance * cos(angle2), a.y + a2_distance * sin(angle2))
+	
 	queue_redraw()
 	
 func _draw() -> void:
